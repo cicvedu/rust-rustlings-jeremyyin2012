@@ -5,11 +5,12 @@
 // You should not modify any existing code. All you need to do is add two line of attributes.
 
 
-// I AM NOT DONE
 
 
 extern {
+    // #[link_name = "my_demo_function"]
     fn my_demo_function(a:u32) -> u32;
+    #[link_name = "my_demo_function"]
     fn my_demo_function_alias(a:u32) -> u32;
 }
 
@@ -17,6 +18,7 @@ extern {
 
 
 mod Foo{
+    #[no_mangle]
     fn my_demo_function(a:u32) -> u32 {a}
 }
 
